@@ -15,5 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         imageButton = (ImageButton)findViewById(R.id.imageButton);
+        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
     }
 }
