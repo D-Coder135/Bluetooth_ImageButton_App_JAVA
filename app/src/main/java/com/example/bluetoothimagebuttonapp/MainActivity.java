@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 if (!bluetoothState) {
                     bluetoothAdapter.enable();
                     bluetoothState = true;
+                    imageButton.setImageResource(R.drawable.on);
                 }
             }
         });
