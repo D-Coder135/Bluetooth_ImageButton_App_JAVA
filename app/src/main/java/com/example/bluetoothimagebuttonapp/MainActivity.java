@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!bluetoothState) {
                     bluetoothAdapter.enable();
+                    bluetoothState = true;
                 }
             }
         });
