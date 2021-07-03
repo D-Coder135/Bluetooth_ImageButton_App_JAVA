@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 public class MainActivity extends AppCompatActivity {
     ImageButton imageButton;
     BluetoothAdapter bluetoothAdapter;
+    private boolean bluetoothState = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,5 +17,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         imageButton = (ImageButton)findViewById(R.id.imageButton);
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+
     }
 }
