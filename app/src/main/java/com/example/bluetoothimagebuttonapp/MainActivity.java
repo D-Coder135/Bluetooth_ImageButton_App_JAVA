@@ -18,18 +18,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         imageButton = (ImageButton)findViewById(R.id.imageButton);
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!bluetoothState) {
-                    bluetoothAdapter.enable();
-                    bluetoothState = true;
-                    imageButton.setImageResource(R.drawable.on);
-                } else {
-                    bluetoothAdapter.disable();
-                    bluetoothState = false;
-                    imageButton.setImageResource(R.drawable.off);
-                }
+        imageButton.setOnClickListener(v -> {
+            if (!bluetoothState) {
+                bluetoothAdapter.enable();
+                bluetoothState = true;
+                imageButton.setImageResource(R.drawable.on);
+            } else {
+                bluetoothAdapter.disable();
+                bluetoothState = false;
+                imageButton.setImageResource(R.drawable.off);
             }
         });
     }
